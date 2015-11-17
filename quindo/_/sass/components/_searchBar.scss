@@ -1,0 +1,87 @@
+// *************************************
+//
+//   Search
+//
+// *************************************
+
+.searchBar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	padding-top: em(31px);
+	z-index: 400;
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+body.is-searching{
+	// overflow: hidden;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.searchBar .row{
+	z-index: $b-zindex-1;
+}
+
+.searchBar-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $c-background;
+}
+
+.searchBar-float{
+	float: left;
+	width: 100%;
+	padding-right: em(80px);
+	margin-right: em(-80px);
+}
+
+input.searchBar-input,
+input.searchBar-submit{
+	display: inline-block;
+	vertical-align: middle;
+
+	border: none;
+	margin-bottom: 0;
+	background-color: $c-background-alt;
+	color: $c-text-alt;
+	font-family: $b-fontFamily-heading;
+	font-weight: 300;
+
+	&:focus {
+		outline:0;
+	}
+}
+
+input.searchBar-input {
+	width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: em(28px);
+	line-height: em(($b-space-px*4), 28px);
+
+	@media screen and (max-width: $g-s) {
+		font-size: em(20px);
+		line-height: em(($b-space-px*4), 20px);
+	}
+}
+
+input.searchBar-submit {
+	width: em(79px, 16px); // Should be 80. Safari bug
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: em(($b-space-px*4), 16px);
+	font-size: em(16px);
+	text-transform: lowercase;
+}

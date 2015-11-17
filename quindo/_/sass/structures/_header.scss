@@ -1,0 +1,136 @@
+// *************************************
+//
+//   Header Bar
+//
+// *************************************
+
+.header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	@include transition(margin-top .2s);
+	z-index: $b-zindex-5;
+
+	.admin-bar &{
+		top: 32px;
+
+		@media screen and (max-width: 782px){
+			top: 46px;
+		}
+
+		@media screen and (max-width: 600px){
+			top: 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px){
+	html.no-js{
+		margin-top: 0px !important;
+	}
+
+	html #wpadminbar{
+		display: none;
+	}
+}
+
+body{
+	padding-top: 49px;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.header-logo{
+
+	.header.is-scrolled &,
+	body.is-searching &{
+		width: em(80px);
+		height: em(80px);
+	}
+}
+
+.header{
+
+	&.is-fixed{
+		position: fixed;
+		top: 0;
+		bottom: auto;
+		@include transform(none);
+	}
+}
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.header-logo{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	width: em(125px);
+	height: em(125px);
+	z-index: $b-zindex-1;
+	@include transition(width .4s, height .4s);
+	@include transform(translateX(-50%));
+	background-position: center;
+	background-size: cover;
+	background-image: image-url("logo.png");
+
+	@media screen and (max-width: $g-m) {
+		width: em(80px);
+		height: em(80px);
+	}
+}
+
+.header-iconWrap{
+	float: right;
+}
+
+.header-icon{
+	display: inline-block;
+	margin-left: em(10px);
+
+	&:first-of-type{
+		margin-left: 0;
+	}
+
+	.comment-icon svg{
+	    position: relative;
+	    top: -2px;
+	    display: inline-block;
+	    vertical-align: bottom;
+	    width: em(30px);
+	    height: em(30px);
+	}
+}
+
+.comment-count{
+	position: relative;
+    top: -1px;
+    right: 0;
+    display: inline;
+    vertical-align: bottom;
+    margin-left: 3px;
+    color: $c-text-invert;
+    font-size: em(22px);
+    line-height: em(30px, 22px);
+}
+
+.header-icon svg{
+	width: em(25px);
+	height: em(25px);
+	fill: $c-text-invert;
+}

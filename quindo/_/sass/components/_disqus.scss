@@ -1,0 +1,43 @@
+// *************************************
+//
+//   Disqus
+//
+// *************************************
+
+.disqus {
+  
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+@media screen and (min-width: $g-s) {
+
+	body #disqus_thread{
+		position: fixed;
+	    top: 50px;
+	    right: 0;
+	    bottom: 0;
+	    width: 40%;
+	    min-width: em(360px);
+	    max-width: em(600px);
+	    padding: em(20px) em(20px) 0;
+	    margin-top: 0;
+	    z-index: $b-zindex-4;
+	    background-color: $c-background-alt;
+	    @include transform(translateX(100%));
+	    @include transition(transform .4s);
+
+	    &.is-visible{
+			@include transform(translateX(0));
+	    }
+	}
+
+}
+
+@media screen and (max-width: $g-s) {
+	.header-icon.comment{
+		display: none;
+	}
+}

@@ -1,0 +1,64 @@
+// *************************************
+//
+//   Example
+//
+// *************************************
+
+.latest {
+	padding-left: em(35px);
+	color: $c-text-alt;
+
+	@media screen and (max-width: $g-m) {
+		padding-left: 0;
+	}
+
+	@media screen and (max-width: $g-s) {
+		height: auto;
+	}
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.latest-story{
+	margin-bottom: $b-space;
+
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+}
+
+.latest-header{
+	color: $c-text-alt;
+	margin-bottom: em($b-space-px, 24px);
+	font-size: em(24px);
+	font-style: italic;
+}
+
+.latest-title{
+	// margin-bottom: em($b-space-1of4-px, 14px);
+	font-size: em(14px);
+}
+
+.latest-time{
+	color: $c-text-subdue;
+	font-size: em(12px);
+	font-family: $b-fontFamily-heading;
+}
+
+.latest-more{
+	text-align: right;
+	font-family: $b-fontFamily-heading;
+	font-size: em(14px);
+	font-style: italic;
+	text-transform: lowercase;
+}
+
+.latest a{
+	color: $c-text-alt;		
+}

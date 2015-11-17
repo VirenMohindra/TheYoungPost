@@ -1,0 +1,18 @@
+// *************************************
+//
+//   One off elements - Components that only need one tag
+// 	 If it needs multiple tags, move to a new component!
+//
+// *************************************
+
+#disqus_thread{
+	margin-top: em(40px);
+}
+
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -151px;
+}
+footer, .push {
+	height: 500px;
+}

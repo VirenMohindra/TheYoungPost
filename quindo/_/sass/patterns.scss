@@ -1,0 +1,125 @@
+@import "compass";
+@import "foundation/reset";
+@import "foundation/helpers";
+@import "foundation/config";
+@import "foundation/base";
+@import "structures/content";
+
+/* ----------------------------------------------------------------------------
+ Patterns Setup
+-------------------------------------------------------------------------------*/
+.sg-pattern{
+	position: relative;
+	margin-bottom: 2em;
+}
+	.sg-pattern-head{
+		padding: 1em 0;
+		border-bottom: 1px solid gray;
+		margin: 2em 0;
+		font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+		font-size: 70%;
+		font-weight: normal;
+		text-align: left;
+		text-transform: none;
+		&:before,&:after{display: none;}
+	}
+	.sg-pattern-body{
+		.container_16{
+			margin: 0 -10px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+		.sg-colors{
+			@extend .clearfix;
+		}
+		.sg-colors li {
+			float: left;
+			width: 5em;
+			padding: 0.3em;
+			border: 1px solid black;
+			margin: 0 0.2em 0.2em 0;
+			overflow: hidden;
+			&:nth-of-type(1){
+				.sg-swatch{background-color: $off-white}
+				.sg-label:after{content: "off white";}
+			}
+			&:nth-of-type(2){
+				.sg-swatch{background-color: $grey-blue}
+				.sg-label:after{content: "grey blue";}
+			}
+			&:nth-of-type(3){
+				.sg-swatch{background-color: $red}
+				.sg-label:after{content: "red";}
+			}
+			&:nth-of-type(4){
+				.sg-swatch{background-color: $white}
+				.sg-label:after{content: "white";}
+			}
+			&:nth-of-type(5){
+				.sg-swatch{background-color: $brown}
+				.sg-label:after{content: "brown";}
+			}
+			&:nth-of-type(6){
+				.sg-swatch{background-color: $black}
+				.sg-label:after{content: "black";}
+			}
+			&:nth-of-type(7){
+				.sg-swatch{background-color: $grey}
+				.sg-label:after{content: "grey";}
+			}
+		}
+			.sg-swatch {
+				display: block;
+				width: 100%;
+				height: 4em;
+				margin-bottom: 0.2em;
+			}
+			.sg-label {
+				line-height: 1;
+			}
+
+		.sg-heading{
+			font-family: $b-fontFamily-heading;
+			strong{
+				font-weight: 900;
+			}
+		}
+		.sg-grid{
+				.g-b div{
+					padding-bottom: 20px;
+					border-color: white;
+					margin-bottom: 20px;
+					background-color: rgba($c-highlight, .5);
+				}
+		}
+		.inline-list{
+			@extend .clearfix;
+			li{
+				margin-right: 10px;
+				float: left;
+			}
+		}
+		.sg-icons{
+			svg{
+				display: block;
+				width: 40px;
+				height: 40px;
+				fill: $c-text;
+				@include transition(.1s opacity);
+				&:hover{
+					opacity: .55;
+				}
+			}
+		}
+		.sg-dummyimg{
+			background-color: grey;
+			border: 3px solid white;
+			box-shadow: 0 0  0 1px grey;
+		}
+		.sg-featured{
+			height: 600px;
+		}
+		.sg-nobmargin{
+			margin-bottom: 0;
+		}

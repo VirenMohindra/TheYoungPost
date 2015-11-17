@@ -1,0 +1,55 @@
+// *************************************
+//
+//   Opinion Section
+//
+// *************************************
+
+.opinion {
+	margin-top: em(10px);
+	margin-bottom: em(10px);
+	font-style: italic;
+	text-align: center;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.opinion a{
+	color: $c-text-heading;
+}
+
+.opinion-image img{
+	width: em(50px);
+	height: em(50px);
+	margin-bottom: $b-space-1of4;
+	@include border-radius(50%);
+	@include transition($b-transition);
+
+	filter: gray; 
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+
+	.opinion:hover &{
+		filter: none;
+  		-webkit-filter: grayscale(0);
+	}
+}
+
+.opinion-author{
+	margin-bottom: em($b-space-3of4-px, 22px);
+	font-size: em(22px);
+	font-family: $b-fontFamily-heading;
+}
+
+.opinion-title{
+	margin-bottom: em($b-space-1of2-px, 12.5px);
+	font-size: em(12.5px);
+	font-family: $b-fontFamily-heading;
+}

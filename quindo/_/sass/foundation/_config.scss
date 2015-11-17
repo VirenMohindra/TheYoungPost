@@ -1,0 +1,145 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// font-family: 'Playfair Display', serif; 400, 400 Italic, 700
+// font-family: 'Raleway', sans-serif; 100, 900
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$off-white: #dcdcdc;
+$grey-blue: #1b2027;
+$red: #ff0000;
+$white: #ffffff;
+$brown: #312424;
+$black: #000000;
+$grey: #808080;
+$grey-blue-light: #384453;
+
+// ----- Base ----- //
+
+$c-background-invert: $grey-blue;
+$c-background: $off-white;
+$c-background-alt: $white;
+$c-background-invert-alt: $brown;
+
+$c-text: $grey-blue-light;
+$c-text-invert: $white;
+$c-text-alt: $black;
+$c-text-highlight: $red;
+$c-text-heading: $grey-blue;
+$c-text-subdue: $grey;
+
+$c-highlight: $red;
+$c-subdue: $grey;
+$c-border: $black;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+// $b-borderRadius: 3px;
+$b-borderStyle: solid;
+$b-borderWidth: 1px;
+$b-border: $b-borderWidth $b-borderStyle $c-border;
+// $b-boxShadow: 0 2px 0 rgba($c-text, 0.25);
+
+// ----- Typography ----- //
+
+$b-fontFamily-heading: 'Raleway', sans-serif;
+$b-fontFamily: 'Tinos', serif;
+
+// Font Sizes
+
+$b-fontSize: 18px;
+
+$b-fontSize-s-px: 16px;
+$b-fontSize-s: em($b-fontSize-s-px);
+
+$b-fontSize-l-px: 20px;
+$b-fontSize-l: em($b-fontSize-l-px);
+
+// Line height
+
+$b-lineHeight: 1.25;
+// $b-lineHeight-heading: 2;
+
+// ----- Sizing ----- //
+
+// Max Width
+
+$b-maxWidth: em(1024px);
+$b-maxWidth-s: em(700px);
+
+// Spacing
+
+$b-space-px: 20px;
+$b-space: em($b-space-px);
+
+$b-space-1of4-px: $b-space-px * .25;
+$b-space-1of4: em($b-space-1of4-px);
+
+$b-space-1of2-px: $b-space-px * .5;
+$b-space-1of2: em($b-space-1of2-px);
+
+$b-space-3of4-px: $b-space-px * .75;
+$b-space-3of4: em($b-space-3of4-px);
+
+$b-space-2-px: $b-space-px * 2;
+$b-space-2: em($b-space-2-px);
+
+$b-space-4-px: $b-space-px * 4;
+$b-space-4: em($b-space-4-px);
+
+// ----- Transitions ----- //
+
+$b-transition-length: .2s;
+$b-transition-easing: ease-in-out;
+$b-transition-property: all;
+$b-transition: $b-transition-property $b-transition-easing $b-transition-length;
+
+// ----- Z-Index ----- //
+
+$b-zindex-n: -1;
+$b-zindex-0: 0;
+$b-zindex-1: 100;
+$b-zindex-2: 200;
+$b-zindex-3: 300;
+$b-zindex-4: 400;
+$b-zindex-5: 500;
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-s: em(550px, 16px);
+$g-m: em(850px, 16px);
+$g-l: em(1024px, 16px);
+
+// Settings
+
+$g-columns: 12;
+$g-defaults: "l" $g-l, "m" $g-m, "s" $g-s;
+$g-gutter: 20px;
+$g-silent: false;
+
+// Selector
+
+$g-selector: if($g-silent, unquote("%"), unquote("."));

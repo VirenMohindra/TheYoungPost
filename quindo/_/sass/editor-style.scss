@@ -1,0 +1,58 @@
+// -------------------------------------
+//   Compass
+// -------------------------------------
+
+@import "compass";
+
+// -------------------------------------
+//   Foundation
+// -------------------------------------
+
+@import "foundation/reset";
+@import "foundation/helpers";
+@import "foundation/config";
+@import "foundation/base";
+
+
+// -------------------------------------
+//   Styles
+// -------------------------------------
+
+/* Wrap the entire post style inside the TinyMCE selector, as suggested
+here http://codex.wordpress.org/Function_Reference/add_editor_style */
+html {
+	
+	height: auto;
+
+	&.ios{
+		height: 100%;
+	}
+}
+
+.ios body#tinymce {
+	
+	height: 200%;
+	max-width: none;
+}
+
+body#tinymce.wp-editor {
+
+	height: auto;
+	margin: 20px 15px;
+	background: $c-background;
+    color: $c-text;
+    font-family: $b-fontFamily;
+    font-size: $b-fontSize;
+    line-height: $b-lineHeight;
+  	-webkit-font-smoothing: antialiased;
+
+  	ul li{
+  		list-style: disc;
+  	}
+
+  	ol li{
+  		list-style: decimal;
+  	}
+
+}
+

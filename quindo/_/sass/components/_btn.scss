@@ -1,0 +1,28 @@
+// *************************************
+//
+//   Buttons!
+//
+// *************************************
+
+.btn{
+	display: inline-block;
+	padding: em(4px, 14px) em(8px, 14px);
+	background-color: $c-background-invert-alt;
+	color: $c-text-invert;
+	font-size: em(14px);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.btn--highlight{
+	background-color: $c-highlight;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+

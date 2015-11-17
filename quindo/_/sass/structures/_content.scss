@@ -1,0 +1,97 @@
+// *************************************
+//
+//   Content
+//   -> Structure is used for user generated content
+//
+// *************************************
+
+// .structure
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.content{
+	ul, ol{
+	    margin-left: $b-space-2;
+	}
+
+	ul li{
+	    list-style: disc;
+	}
+
+	ol li{
+	    list-style: decimal;
+	}
+
+	h1, .h1 {
+        font-size: em(46px);
+        margin-bottom: em($b-space-px, 46px);
+
+        @media screen and (max-width: $g-m) {
+            font-size: em(34px);
+        }
+
+        @media screen and (max-width: $g-s) {
+            font-size: em(26px);
+        }
+    }
+
+    h2, .h2 {
+        font-size: em(34px);
+        margin-bottom: em($b-space-px, 34px);
+
+        @media screen and (max-width: $g-m) {
+            font-size: em(26px);
+        }
+
+        @media screen and (max-width: $g-s) {
+            font-size: em(21px);
+        }
+    }
+
+    h3, .h3 {
+        font-size: em(28px);
+        margin-bottom: em($b-space-px, 28px);
+
+        @media screen and (max-width: $g-m) {
+            font-size: em(21px);
+        }
+
+        @media screen and (max-width: $g-s) {
+            font-size: em(18px);
+        }
+    }
+
+    h4, .h4 {
+        font-size: em(24px);
+        margin-bottom: em($b-space-px, 24px);
+
+        @media screen and (max-width: $g-m) {
+            font-size: em(18px);
+        }
+
+        @media screen and (max-width: $g-s) {
+            font-size: em(16px);
+        }
+    }
+}
+

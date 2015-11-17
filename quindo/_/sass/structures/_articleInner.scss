@@ -1,0 +1,44 @@
+// *************************************
+//
+//   Article Info
+//   -> Inner article title/meta
+//
+// *************************************
+
+// .structure
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.articleInfo-subtitle{
+	font-family: $b-fontFamily-heading;
+	font-size: em(16px);
+}
+
+.articleInfo-author{
+	font-family: $b-fontFamily-heading;
+	font-size: em(16px);
+	a{
+		color: $c-text;
+		font-weight: bold;
+	}
+}

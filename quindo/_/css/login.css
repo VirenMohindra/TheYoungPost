@@ -1,0 +1,9 @@
+/* the logo */
+/* line 3, ../sass/login.scss */
+.login h1 a {
+  width: 108px;
+  height: 108px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/pro/login-logo.png?1439689960');
+}

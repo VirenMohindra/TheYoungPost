@@ -1,0 +1,101 @@
+// *************************************
+//
+//   Menu
+//
+// *************************************
+
+.menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	padding-top: em(15px);
+	background-color: $c-background;
+	z-index: $b-zindex-5;
+
+	@media screen and (max-width: $g-s) {
+		.is-menuOpen &{
+			// Bad practice to use important blah blah blah but had to if 
+			// I wanted to use jQuery's slide functions
+			overflow-y: scroll !important;
+		}
+	}
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+@media screen and (max-width: $g-s) {
+	.is-menuOpen{
+		overflow: hidden;
+	}
+}
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.menu-close{
+	position: absolute;
+	top: 0;
+	left: 0;
+	svg{
+		width: em(25px);
+		height: em(25px);
+		fill: $c-text-heading;
+	}
+}
+
+.menu-logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: em(50px);
+	height: em(50px);
+	background-position: center;
+	background-size: cover;
+	background-image: image-url("logo.png");
+}
+
+.menu-breadcrumbs{
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    left: 30px;
+    margin: 0;
+    @include transform(translateY(-50%));
+    font-family: $b-fontFamily-heading;
+    font-weight: 900;
+    text-align: right;
+    font-size: em(15px);
+    text-transform: uppercase;
+
+    li{
+    	display: inline-block;
+	    margin: 0 3px;
+    }
+
+    a{
+    	color: $c-text-heading;
+    }
+
+    @media screen and (max-width: $g-s) {
+		font-size: em(14px);
+    }
+}

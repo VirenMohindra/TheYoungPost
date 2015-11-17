@@ -1,0 +1,76 @@
+// *************************************
+//
+//   404 Component
+//
+// *************************************
+
+.f0f {
+  	text-align: center;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.f0f-gears{
+	margin-bottom: $b-space-1of2;
+}
+
+.f0f-gears-half{
+	display: inline-block;
+	vertical-align: middle;
+
+	&:first-of-type{
+		margin-right: -$b-space-3of4;
+	}
+}
+
+.f0f-gear{
+	fill: #262626;
+	@include animation(spin 8s linear infinite);
+}
+
+.f0f-gear--large{
+	width: em(115px);
+	height: em(115px);
+}
+
+.f0f-gear--small{
+	width: em(70px);
+	height: em(70px);
+	margin-bottom: $b-space;
+	@include animation-direction(reverse);
+	@include animation-duration(6s);
+
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+}
+
+.f0f-head{
+	margin-bottom: em(-25px, 170px);
+	font-size: em(170px);
+	font-weight: 300;
+}
+
+.f0f-subHead{
+	font-size: em(55px);
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+@include keyframes(spin) {
+	from{
+		@include transform(rotate(0deg));
+	}
+
+	to{
+		@include transform(rotate(360deg));
+	}
+}

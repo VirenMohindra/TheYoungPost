@@ -1,0 +1,25 @@
+// *************************************
+//
+//   Example
+//
+// *************************************
+
+.insideFeatured{
+	width: 100%;
+	height: em(355px);
+	margin-bottom: em(10px);
+	background-position: center;
+	background-size: cover;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.insideFeatured-inner{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: em(355px);
+}

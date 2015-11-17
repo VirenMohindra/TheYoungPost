@@ -1,0 +1,33 @@
+// *************************************
+//
+//   Footer Bar
+//
+// *************************************
+
+.footer{
+	margin-top: em(10px);
+	z-index: $b-zindex-3;
+	color: $c-text-invert;
+	font-family: $b-fontFamily-heading;
+	font-weight: 300;
+
+	a{
+		color: $c-text-invert;
+	}
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.footer-menu{
+	font-size: em(18px);
+
+	li{
+		margin-bottom: em($b-space-1of4-px, 18px);
+	}
+}
+
+.footer-copy{
+	font-size: em(12px);		
+}

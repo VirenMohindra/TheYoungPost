@@ -1,0 +1,69 @@
+// *************************************
+//
+//   Menu Articles
+//
+// *************************************
+
+.menuArt {
+	position: absolute;
+	display: block;
+	width: 100%;
+	opacity: 0;
+	@include transition (.4s opacity);
+	pointer-events: none;
+	color: $c-text-alt;
+	font-family: $b-fontFamily-heading;
+	font-weight: 300;
+
+	@media screen and (max-width: $g-s) {
+		position: relative;
+		opacity: 1;
+		margin-bottom: em(15px);
+		pointer-events: auto;
+
+		&:first-of-type{
+			margin-top: em(85px);
+		}
+	}
+}
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.menuArt.is-hovering{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.menuArt-heading {
+	display: block;
+	margin-bottom: em(10px);
+
+	color: $c-text-alt;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+
+	@media screen and (max-width: $g-s) {
+		margin-bottom: em(5px, 21px);
+		font-size: em(21px);
+	}
+}
+
+.menuArt-title {
+	display: block;
+	padding-left: em(90px, 14px);
+	color: $c-text-alt;
+	font-size: em(14px);
+}
+
+.menuArt-image {
+	float: left;
+	width: em(85px, 14px);
+	font-size: em(14px);
+}

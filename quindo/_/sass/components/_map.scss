@@ -1,0 +1,30 @@
+// *************************************
+//
+//   Map
+//
+// *************************************
+
+.map {
+	max-width: 847px;
+	margin: em(85px) auto $b-space;
+	margin-top: em(85px);
+
+	@media screen and (max-width: $g-s) {
+		display: none;
+	}
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.map{
+
+	image[data-continent]{
+		cursor: pointer;
+		@include transition(.2s opacity);
+		&:hover{
+			opacity: .5;
+		}
+	}
+}

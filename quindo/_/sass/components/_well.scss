@@ -1,0 +1,31 @@
+// *************************************
+//
+//   Well
+//   -> Vertical spacing
+//
+// *************************************
+
+.well {
+  	margin-bottom: $b-space;
+  	margin-top: $b-space;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Sizes ----- //
+.well--s{
+	margin-bottom: $b-space-1of2;
+  	margin-top: $b-space-1of2;
+}
+
+.well--l{
+  	margin-top: $b-space * 3;
+  	margin-bottom: $b-space * 3;
+}
+
+.well--xl{
+  	margin-top: $b-space * 6;
+  	margin-bottom: $b-space * 6;
+}

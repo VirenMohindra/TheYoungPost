@@ -1,0 +1,108 @@
+// *************************************
+//
+//   Example
+//
+// *************************************
+
+.featured {
+	position: relative;  
+	display: block;
+	height: 700px; // Default value so it's not as jarring when js runs
+	margin-bottom: em(10px);
+	background-position: center;
+	background-size: cover;
+}
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+.featured{
+	&:after{
+		position: absolute;
+		top:0;left:0;bottom:0;right:0;
+		background-color: rgba($black, .5);
+		content: '';
+	}
+}
+
+.featured-g,
+.featured-row,
+.featured-cell{
+	height: 100%;
+	z-index: 10;
+}
+
+.featured-logo{
+	display: block;
+	margin-top: $b-space;
+}
+
+.featured-logo{
+	width: em(125px);
+	height: em(125px);
+	background-position: center;
+	background-size: cover;
+	background-image: image-url("logo.png");
+}
+
+.featured-contentGrid{
+	position: relative;
+	height: 100%;
+}
+
+.featured-content{
+	position: absolute;
+	right: 10px;
+	bottom: em(135px);
+	text-align: right;
+}
+
+.featured-btn{
+	margin-bottom: em($b-space-1of2-px, 14px);
+}
+
+.featured-title{
+	font-family: $b-fontFamily;
+	font-size: em(34px);
+
+	a{
+		color: $c-text-invert;
+	}
+}
+
+.featured-link{
+	position: absolute;
+	top:0;right:0;bottom:0;left:0;
+	z-index: $b-zindex-1;
+}
+
+.featured-arrow{
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	z-index: $b-zindex-2;
+	@include transform(translateX(-50%));
+	@include animation(hover 4s infinite);
+
+	svg{
+		width: em(30px);
+		fill: $c-text-invert;
+	}
+}
+
+@include keyframes(hover) {
+	0%, 100%{
+		bottom: 75px;
+	}
+
+	50%{
+		bottom: 95px;
+	}
+}
